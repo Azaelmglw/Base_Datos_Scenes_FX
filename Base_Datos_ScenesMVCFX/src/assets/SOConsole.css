@@ -1,0 +1,320 @@
+/* 
+    Created on : Apr 20, 2018, 8:37:06 PM
+    Author     : Azaelmglw
+*/
+
+
+/*BACKGROUNDS*/
+.background {
+    -fx-background-color: radial-gradient(
+        focus-angle 20deg,
+        focus-distance 200%,
+        center 55% 85%, 
+        radius 150%,
+        rgba(8,49,96,0.8),
+        rgba(4,98,207,1),
+        rgba(126,171,222,0.8));
+}
+
+.background_2 {
+    -fx-background-color: radial-gradient(
+        focus-angle 20deg,
+        focus-distance 200%,
+        center 55% 85%, 
+        radius 150%,
+        rgba(126,171,222,0.8),
+        rgba(4,98,207,1),
+        rgba(8,49,96,0.8));
+}
+
+.background_3 {
+    -fx-background-color: rgba(8,49,96,0.8);
+}
+
+.background_4 {
+    -fx-background-color: rgba(0,0,0,0.8);
+}
+
+/*TABLE_VIEWS*/
+.table_view_1 {
+    -fx-cell-size: 40px;
+    -fx-fixed-cell-size: 40px;
+    -fx-border-width: 3px;
+    -fx-border-color: rgba(0,0,0,0.8);
+    -fx-background-color: transparent;
+    -fx-font: 18px "PakType Naskh Basic";
+    -fx-text-fill: rgba(255,255,255,1);
+}
+
+.table_view_1 .column-header {
+    -fx-border-width: 2px;
+    -fx-border-color: transparent rgba(255,255,255,1) transparent transparent;
+    -fx-background-color: rgba(0,0,0,1);
+}
+
+.table_view_1 .column-header .label {
+    -fx-font: 24px "PakType Naskh Basic";
+    -fx-text-fill: rgba(255,255,255,1);
+}
+
+.table_view_1 .cell {
+    -fx-border-width: 2px;
+    -fx-border-color: rgba(255,255,255,0.8);
+    -fx-text-fill: rgba(255,255,255,1);
+}
+
+/*VBOX*/
+.vbox_1 {
+    -fx-border-width: 3px;
+    -fx-border-color: rgba(0,0,0,0.8);
+    -fx-background-color: transparent;
+}
+
+/*SPLIT_PANES*/
+.split-pane:horizontal > .split-pane-divider {
+    -fx-background-color: rgba(98,101,136,0.6);
+}
+
+.split-pane:vertical > .split-pane-divider {
+    -fx-background-insets: 2px;
+    -fx-background-color: rgba(255,255,255,0.8);
+}
+
+/*LABELS*/
+.icon_label {
+    -fx-background-size: 40px;
+    -fx-background-repeat: no-repeat;
+    -fx-effect: dropshadow(gaussian ,  rgba(0,0,0,0.8) , 10, 0.5 , 0 , 1 );
+}
+
+.description_label {
+    -fx-font: 20px "PakType Naskh Basic", normal, normal;
+    -fx-text-fill: rgba(255,255,255,1);
+}
+
+/*TEXT AREA*/ 
+.text-area {
+    -fx-background-color: transparent;
+    -fx-font: 19px "PakType Naskh Basic";
+    -fx-text-fill: rgba(218,200,9,1);
+    -fx-display-caret: true;
+}
+
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.text-area .scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.text-area .scroll-pane .content {
+    -fx-background-color: transparent;
+}
+
+/*BUTTONS*/
+.option_button {
+    -fx-background-radius: 5em / 15em;
+    -fx-border-radius: 5em 5em 5em 5em / 15em 15em 15em 14em;
+    -fx-border-width: 5px;
+    -fx-border-color: rgba(0,0,0,1);
+    -fx-background-color: rgba(0,0,0,0.7);
+    -fx-text-fill: rgba(255,255,255,1);
+    -fx-font: 43px "PakType Naskh Basic";
+}
+
+.option_button:hover {
+    -fx-cursor: hand;
+    -fx-border-width: 10px;
+    -fx-effect: dropshadow(gaussian ,  rgba(0,0,0,0.8) , 5, 0.0 , 0 , 1 );
+    -fx-text-fill: rgba(83,220,220,1);
+    -fx-underline: true;
+}
+
+/*MENU BUTTONS*/
+
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-font: 20px "PakType Naskh Basic", normal, normal;
+}
+
+.menu-button .label {
+    -fx-font: 20px "PakType Naskh Basic", normal, normal;
+    -fx-text-fill: rgba(255,255,255,1);
+}
+
+.menu-button .menu-item {   
+}
+
+.context-menu {
+    -fx-border-width: 2px;
+    -fx-border-color: transparent transparent rgba(255,255,255,1) transparent;
+    -fx-background-color: rgba(8,49,96,1);
+    -fx-background-color: radial-gradient(
+        focus-angle 90deg,
+        focus-distance 100%,
+        center 50% 90%, 
+        radius 150%,
+        rgba(8,49,96,1),
+        rgba(4,98,207,1),
+        rgba(126,171,222,1));
+}
+
+.menu-button:hover {
+    -fx-effect: dropshadow(gaussian ,  rgba(255,255,255,0.8) , 30, 0.7 , 0 , 3 );
+}
+
+.menu-item:focused {
+    -fx-background-color: rgba(255,255,255,0.8);
+    -fx-text-fill: rgba(0,0,0,1);
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: rgba(0,0,0,1);
+}
+
+/*LEFT_SUBMENU SPECIFICS*/
+.left_sub_menu {
+    -fx-background-radius: 0em 38em 38em 0em / 15em 15em 15em 15em;
+    -fx-border-radius: 0em 40em 40em 0em / 15em 15em 15em 15em;
+    -fx-border-width: 4px;
+    -fx-border-color: rgba(8,49,96,0.8);
+    -fx-background-color: rgba(126,171,222,0.8);
+}
+
+.quick_menu_button {
+    -fx-background-size: 35px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 50%;
+    -fx-background-color: rgba(0,0,0,0.6);
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: 'PakType Naskh Basic';
+    -fx-font-size: 15px;
+}
+
+#quick_menu_1 {
+    -fx-background-image: url('Search_white_icon.png');
+}
+
+#quick_menu_5 {
+    -fx-background-image: url('Help_white_icon.png');
+}
+
+.quick_menu_button:hover {
+    -fx-cursor: hand;
+    -fx-border-width: 2px;
+    -fx-background-color: rgba(8,49,96,1);
+    -fx-background-color: radial-gradient(focus-distance 0% , center 50% 50% , radius 65% , rgba(0,88,188,1), rgba(8,49,96,1));
+    -fx-border-color: rgba(0,0,0,0.7);
+}
+
+.aux_quick_menu_button {
+    -fx-background-color: rgba(0,0,0,0.6);
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: 'PakType Naskh Basic';
+    -fx-font-size: 15px;
+}
+
+#aux_top {
+    -fx-background-radius: 0em 15em 0em 0em / 5em;
+    -fx-border-radius: 0em 15em 0em 0em / 5em;
+}
+
+#aux_bottom {
+    -fx-background-radius: 0em 0em 15em 0em / 5em;
+    -fx-border-radius: 0em 0em 15em 0em / 5em;
+}
+
+#aux_top:hover {
+    -fx-cursor: hand;
+    -fx-border-width: 2px;
+    -fx-background-color: radial-gradient(
+        focus-angle 180deg,
+        focus-distance 120%,
+        center 80% 70%, 
+        radius 150%,
+        rgba(83,220,220,0.5),
+        rgba(4,98,207,1),
+        rgba(126,171,222,0.8));
+    -fx-effect: dropshadow(gaussian ,  rgba(0,0,0,0.8) , 5, 0.0 , 0 , 1 );
+    -fx-border-color: rgba(0,0,0,0.7);
+}
+
+#aux_bottom:hover {
+    -fx-cursor: hand;
+    -fx-border-width: 2px;
+    -fx-background-color: radial-gradient(
+        focus-angle 180deg,
+        focus-distance 120%,
+        center 80% 70%, 
+        radius 150%,
+        rgba(83,220,220,0.5),
+        rgba(4,98,207,1),
+        rgba(126,171,222,0.8));
+    -fx-effect: dropshadow(gaussian ,  rgba(0,0,0,0.8) , 5, 0.0 , 0 , 1 );
+    -fx-border-color: rgba(0,0,0,0.7);
+}
+
+/*INPUT_FIELDS*/
+.input_field {
+    -fx-background-insets: 0, 0 0 2 0 ;
+    -fx-background-radius: 0 ;
+    -fx-text-alignment: right;
+    -fx-font: 20px "PakType Naskh Basic", normal, normal;
+    -fx-background-color: rgba(255,255,255,1),  rgba(0,0,0,0.8) ;
+    -fx-text-fill: rgba(83,220,220,0.8);
+}
+
+/*LOGIN UI SPECIFICS*/
+#software_name {
+    -fx-font: 100 "PakType Naskh Basic", normal, normal;
+    -fx-text-fill: rgba(0,0,0,0.5);
+    -fx-effect: dropshadow(gaussian ,  rgba(0,0,0,0.8) , 10, 0.5 , 0 , 1 );
+}
+
+#account_icon {
+    -fx-background-size: 40px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-image: url('Account_white_icon.png');
+}
+
+#password_icon {
+    -fx-background-image: url('Lock_white_icon.png');
+}
+
+/*MAIN_MENU UI SPECIFICS*/
+#console_button {
+    -fx-graphic: url(Console_mode_white_icon.png);
+}
+
+#terminal_button {
+    -fx-graphic: url(Terminal_mode_white_icon.png);
+}
+
+/*TERMINAL_MENU UI SPECIFICS*/
+#new_sale_button {
+    -fx-graphic: url(New_sale_white_icon.png);
+}
+
+#sales_record_button {
+    -fx-graphic: url(Sales_record_white_icon.png);
+}
+
+/*CONSOLE_MENU UI SPECIFICS*/
+#users_button {
+    -fx-graphic: url(Users_white_icon.png);
+}
+
+#clients_button {
+    -fx-graphic: url(Clients_white_icon.png);
+}
+
+#reports_button {
+    -fx-graphic: url(Reports_white_icon.png);
+}
+
+#services_button {
+    -fx-graphic: url(Services_white_icon.png);
+}

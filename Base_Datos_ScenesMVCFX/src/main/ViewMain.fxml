@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="root_vbox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../assets/SOConsole.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox fx:id="top_section_hbox" prefHeight="50.0" prefWidth="600.0" styleClass="background_2" VBox.vgrow="NEVER">
+         <children>
+            <VBox fx:id="top_left_section_vbox" prefHeight="200.0" prefWidth="300.0" HBox.hgrow="ALWAYS" />
+            <VBox fx:id="top_right_section_vbox" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="300.0" HBox.hgrow="ALWAYS" />
+         </children></HBox>
+      <HBox fx:id="working_area_hbox" alignment="CENTER_LEFT" prefHeight="300.0" prefWidth="600.0" styleClass="background_4" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox fx:id="middle_left_section_vbox" alignment="CENTER_LEFT" prefHeight="300.0" prefWidth="400.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox fx:id="first_field_hbox" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Label fx:id="name_lbl" prefWidth="125.0" styleClass="description_label" text="Name/s" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="15.0" right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="name_tfield" alignment="CENTER" editable="false" styleClass="input_field" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="second_field_hbox" alignment="CENTER_LEFT" layoutX="10.0" layoutY="135.0" prefHeight="50.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Label fx:id="email_lbl" prefWidth="125.0" styleClass="description_label" text="Email:" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="15.0" right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="email_tfield" alignment="CENTER" editable="false" styleClass="input_field" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="third_field_hbox" alignment="CENTER_LEFT" layoutX="10.0" layoutY="160.0" prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="telephone_lbl" prefWidth="125.0" styleClass="description_label" text="Telephone:" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="15.0" right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="telephone_tfield" alignment="CENTER" editable="false" styleClass="input_field" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox fx:id="middle_right_section_vbox" alignment="TOP_CENTER" prefHeight="300.0" prefWidth="300.0" styleClass="background_3" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox fx:id="controls_header_hbox" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="controls_lbl" styleClass="description_label" text="Controls" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="first_row_controls_hbox" alignment="CENTER" prefHeight="75.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="first_btn" mnemonicParsing="false" onAction="#FirstValue" prefHeight="50.0" prefWidth="100.0" styleClass="quick_menu_button" text="|&lt;-">
+                           <font>
+                              <Font name="Cantarell Bold" size="55.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="previous_btn" mnemonicParsing="false" onAction="#PreviousValue" prefHeight="50.0" prefWidth="100.0" styleClass="quick_menu_button" text="&lt;-" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="Cantarell Bold" size="55.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="next_btn" mnemonicParsing="false" onAction="#NextValue" prefHeight="50.0" prefWidth="100.0" styleClass="quick_menu_button" text="-&gt;" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="Cantarell Bold" size="55.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="last_btn" layoutX="110.0" layoutY="31.0" mnemonicParsing="false" onAction="#LastValue" prefHeight="50.0" prefWidth="100.0" styleClass="quick_menu_button" text="-&gt;|">
+                           <font>
+                              <Font name="Cantarell Bold" size="55.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="second_row_controls_hbox" alignment="CENTER" layoutX="10.0" layoutY="147.0" prefHeight="75.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="details_btn" mnemonicParsing="false" onAction="#ShowUserDetails" prefWidth="200.0" styleClass="quick_menu_button" text="Details" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></HBox>
+      <HBox fx:id="bottom_section_hbox" alignment="CENTER" prefHeight="50.0" prefWidth="600.0" styleClass="background" VBox.vgrow="NEVER">
+         <children>
+            <Button fx:id="start_btn" mnemonicParsing="false" onAction="#Start" prefWidth="300.0" styleClass="quick_menu_button" text="Start" HBox.hgrow="ALWAYS" />
+         </children></HBox>
+   </children>
+</VBox>

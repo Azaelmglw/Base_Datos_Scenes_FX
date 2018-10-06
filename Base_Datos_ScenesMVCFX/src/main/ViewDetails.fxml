@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="root_vbox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../assets/SOConsole.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox fx:id="top_section_hbox" prefHeight="50.0" prefWidth="600.0" styleClass="background_4" VBox.vgrow="NEVER" />
+      <HBox fx:id="working_area_hbox" alignment="CENTER_LEFT" prefHeight="300.0" prefWidth="600.0" styleClass="background_4" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox fx:id="details_container_vbox" alignment="TOP_CENTER" prefHeight="300.0" prefWidth="300.0" styleClass="background_3" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox fx:id="user_header_hbox" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="user_details_lbl" layoutX="310.0" layoutY="21.0" styleClass="description_label" text="User Details" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="first_row_details_hbox" alignment="CENTER" prefHeight="83.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="name_lbl" styleClass="description_label" text="Name:" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="second_row_details_hbox" alignment="CENTER" layoutX="10.0" layoutY="147.0" prefHeight="83.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="email_lbl" styleClass="description_label" text="Email:" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="third_row_details_hbox" alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="83.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="telephone_number_lbl" styleClass="description_label" text="Telephone Number:" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></HBox>
+      <HBox fx:id="bottom_section_hbox" alignment="CENTER" prefHeight="50.0" prefWidth="600.0" styleClass="background_4" VBox.vgrow="NEVER">
+         <children>
+            <Button fx:id="ok_btn" mnemonicParsing="false" onAction="#CloseUserDetails" prefWidth="300.0" styleClass="quick_menu_button" text="OK" HBox.hgrow="ALWAYS" />
+         </children></HBox>
+   </children>
+</VBox>
