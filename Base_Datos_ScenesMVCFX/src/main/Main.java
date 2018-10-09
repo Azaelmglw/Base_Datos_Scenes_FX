@@ -4,6 +4,7 @@ import models.*;
 import controllers.*;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.function.UnaryOperator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Application;
@@ -12,6 +13,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.TextFormatter;
 import javafx.stage.Stage;
 
 /**
@@ -82,9 +84,40 @@ public class Main extends Application{
             //  Scenes Declaration.
             Scene main_scene = new Scene(main, 800, 768);
             
+            //  Unary Operators Declaration.
+            UnaryOperator<TextFormatter.Change> text_filter = c -> {
+                if(!c.getText().matches("[A-Z]") && !c.getText().matches("[a-z]") && !c.getText().matches(" ") || c.isDeleted()){
+                    c.setText("");
+                    return c;
+                }
+                else if(c.getText().isEmpty()){
+                    return c;
+                }
+                return c;
+            };
+            
+            UnaryOperator<TextFormatter.Change> telephone_filter = c -> {
+                if(!c.getText().matches("[0-9]") || c.isDeleted()){
+                    c.setText("");
+                    return c;
+                }
+                else if(c.getText().isEmpty()){
+                    return c;
+                }
+                return c;
+            };
+            
+            //  Text Formatters Declaration.
+            TextFormatter<String> name_formatter = new TextFormatter<>(text_filter);
+            TextFormatter<String> telephone_formatter = new TextFormatter<>(telephone_filter);
+            
+            //  Text Formatters Assignation.
+            model_main.setTextFormatter(0, name_formatter);
+            model_main.setTextFormatter(1, telephone_formatter);
+            
             //  Alerts Declaration.
             Alert confirmation_alert = new Alert(Alert.AlertType.CONFIRMATION);
-            confirmation_alert.getButtonTypes().setAll(ButtonType.YES, ButtonType.NO, ButtonType.CANCEL);
+            confirmation_alert.getButtonTypes().setAll(ButtonType.YES, ButtonType.NO);
             Alert error_alert = new Alert(Alert.AlertType.ERROR);
             error_alert.setTitle("Something went wrong");
             

@@ -15,7 +15,7 @@
          </children></HBox>
       <HBox fx:id="working_area_hbox" alignment="CENTER_LEFT" prefHeight="300.0" prefWidth="600.0" styleClass="background_4" VBox.vgrow="ALWAYS">
          <children>
-            <VBox fx:id="middle_left_section_vbox" alignment="CENTER_LEFT" prefHeight="300.0" prefWidth="400.0" HBox.hgrow="ALWAYS">
+            <VBox fx:id="middle_left_section_vbox" alignment="CENTER_LEFT" prefHeight="300.0" prefWidth="300.0" HBox.hgrow="ALWAYS">
                <children>
                   <HBox fx:id="first_field_hbox" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" VBox.vgrow="NEVER">
                      <children>
@@ -24,7 +24,7 @@
                               <Insets left="15.0" right="5.0" />
                            </HBox.margin>
                         </Label>
-                        <TextField fx:id="name_tfield" alignment="CENTER" editable="false" styleClass="input_field" HBox.hgrow="ALWAYS">
+                        <TextField fx:id="name_tfield" alignment="CENTER" styleClass="input_field" HBox.hgrow="ALWAYS">
                            <HBox.margin>
                               <Insets right="15.0" />
                            </HBox.margin>
@@ -38,7 +38,7 @@
                               <Insets left="15.0" right="5.0" />
                            </HBox.margin>
                         </Label>
-                        <TextField fx:id="email_tfield" alignment="CENTER" editable="false" styleClass="input_field" HBox.hgrow="ALWAYS">
+                        <TextField fx:id="email_tfield" alignment="CENTER" styleClass="input_field" HBox.hgrow="ALWAYS">
                            <HBox.margin>
                               <Insets right="15.0" />
                            </HBox.margin>
@@ -52,7 +52,7 @@
                               <Insets left="15.0" right="5.0" />
                            </HBox.margin>
                         </Label>
-                        <TextField fx:id="telephone_tfield" alignment="CENTER" editable="false" styleClass="input_field" HBox.hgrow="ALWAYS">
+                        <TextField fx:id="telephone_tfield" alignment="CENTER" styleClass="input_field" HBox.hgrow="ALWAYS">
                            <HBox.margin>
                               <Insets right="15.0" />
                            </HBox.margin>
@@ -68,7 +68,43 @@
                         <Label fx:id="controls_lbl" styleClass="description_label" text="Controls" />
                      </children>
                   </HBox>
-                  <HBox fx:id="first_row_controls_hbox" alignment="CENTER" prefHeight="75.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                  <HBox fx:id="first_row_controls_hbox" alignment="CENTER" layoutX="10.0" layoutY="93.0" prefHeight="75.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="new_btn" mnemonicParsing="false" onAction="#NewUser" prefHeight="75.0" prefWidth="100.0" styleClass="quick_menu_button" text="New">
+                           <font>
+                              <Font name="Cantarell Bold" size="55.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="add_btn" mnemonicParsing="false" onAction="#AddUser" prefHeight="75.0" prefWidth="100.0" styleClass="quick_menu_button" text="Add" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="Cantarell Bold" size="55.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="modify_btn" mnemonicParsing="false" onAction="#ModifyUser" prefHeight="75.0" prefWidth="100.0" styleClass="quick_menu_button" text="Modify" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="Cantarell Bold" size="55.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="delete_btn" layoutX="110.0" layoutY="31.0" mnemonicParsing="false" onAction="#DeleteUser" prefHeight="75.0" prefWidth="100.0" styleClass="quick_menu_button" text="Delete">
+                           <font>
+                              <Font name="Cantarell Bold" size="55.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="second_row_controls_hbox" alignment="CENTER" prefHeight="75.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
                      <children>
                         <Button fx:id="first_btn" mnemonicParsing="false" onAction="#FirstValue" prefHeight="50.0" prefWidth="100.0" styleClass="quick_menu_button" text="|&lt;-">
                            <font>
@@ -104,7 +140,7 @@
                         </Button>
                      </children>
                   </HBox>
-                  <HBox fx:id="second_row_controls_hbox" alignment="CENTER" layoutX="10.0" layoutY="147.0" prefHeight="75.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                  <HBox fx:id="third_row_controls_hbox" alignment="CENTER" layoutX="10.0" layoutY="147.0" prefHeight="50.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
                      <children>
                         <Button fx:id="details_btn" mnemonicParsing="false" onAction="#ShowUserDetails" prefWidth="200.0" styleClass="quick_menu_button" text="Details" HBox.hgrow="ALWAYS" />
                      </children>
